@@ -12,6 +12,11 @@ A lightweight video player for the **original Raspberry Pi** that:
 - `omxplayer` for hardware-accelerated video playback
 - Python 3.7+
 
+- raspbian buster
+https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/
+
+touch ssh
+
 ## Installation
 
 ### 1. Update APT Sources (Buster is archived)
