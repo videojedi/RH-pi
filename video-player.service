@@ -1,0 +1,21 @@
+[Unit]
+Description=Video Player Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi
+ExecStart=/usr/bin/python3 /home/pi/video_player.py --video /home/pi/video/current_video.mp4
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+# Give access to GPU for hardware video decoding
+SupplementaryGroups=video audio
+
+[Install]
+WantedBy=multi-user.target
